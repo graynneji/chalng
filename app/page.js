@@ -20,6 +20,7 @@ import {
   Target,
   Zap,
   Calendar,
+  Microscope,
 } from "lucide-react";
 
 // Header Component
@@ -33,62 +34,77 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
-      }`}
-    >
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
-              <Beaker className="w-5 h-5 text-white" />
+    <header className="bg-white shadow-sm sticky top-0 z-50">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-2 rounded-xl">
+              <Microscope className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-xl font-bold text-gray-900">AccessMedLab</h1>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">
+                Access Med Lab
+              </h1>
+              <p className="text-sm text-gray-600">
+                Premier Specialty Laboratory
+              </p>
+            </div>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
             <a
               href="#services"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Services
             </a>
             <a
               href="#about"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               About
             </a>
             <a
-              href="#partnerships"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              href="#physicians"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
-              Partners
+              For Physicians
+            </a>
+            <a
+              href="#patients"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              For Patients
             </a>
             <a
               href="#contact"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Contact
             </a>
           </nav>
 
+          {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-              Get Started
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+              Physician Login
+            </button>
+            <button className="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+              Patient Portal
             </button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
+            className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             ) : (
-              <Menu className="w-5 h-5" />
+              <Menu className="w-6 h-6" />
             )}
           </button>
         </div>
@@ -96,35 +112,46 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 py-4">
-          <div className="container mx-auto px-4 space-y-4">
+        <div className="md:hidden bg-white border-t">
+          <div className="px-4 py-4 space-y-4">
             <a
               href="#services"
-              className="block text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="block text-gray-700 hover:text-blue-600 font-medium"
             >
               Services
             </a>
             <a
               href="#about"
-              className="block text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="block text-gray-700 hover:text-blue-600 font-medium"
             >
               About
             </a>
             <a
-              href="#partnerships"
-              className="block text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              href="#physicians"
+              className="block text-gray-700 hover:text-blue-600 font-medium"
             >
-              Partners
+              For Physicians
+            </a>
+            <a
+              href="#patients"
+              className="block text-gray-700 hover:text-blue-600 font-medium"
+            >
+              For Patients
             </a>
             <a
               href="#contact"
-              className="block text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="block text-gray-700 hover:text-blue-600 font-medium"
             >
               Contact
             </a>
-            <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-              Get Started
-            </button>
+            <div className="pt-4 space-y-2">
+              <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                Physician Login
+              </button>
+              <button className="w-full border border-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+                Patient Portal
+              </button>
+            </div>
           </div>
         </div>
       )}
