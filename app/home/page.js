@@ -181,7 +181,7 @@ const AccessMedLabHomepage = () => {
 
     return (
       <section id="services" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className=" mx-auto px-4 ">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               How We Serve You
@@ -288,7 +288,7 @@ const AccessMedLabHomepage = () => {
 
     return (
       <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className=" mx-auto px-4 ">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -476,93 +476,135 @@ const AccessMedLabHomepage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-16 pb-24">
-        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-8 pb-8 relative overflow-hidden">
+        {/* Floating elements for visual interest */}
+        {/* <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-30 animate-pulse"></div> */}
+        {/* <div className="absolute bottom-20 right-10 w-16 h-16 bg-teal-200 rounded-full opacity-40 animate-bounce"></div> */}
+        {/* <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div> */}
+        {/* <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div> */}
+
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
+            <div className="space-y-8">
+              {/* Trust badge */}
+
+              <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
                 Nation's Premier
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
                   {" "}
                   Specialty Laboratory
                 </span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed">
                 Ultra-automated facility delivering accurate results within 24
                 hours. Specialized testing for hormone analysis, anti-aging,
                 weight loss, and comprehensive diagnostic solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+
+              {/* Stats row */}
+              <div className="grid grid-cols-3 justify-items-start  mb-8 py-6 bg-white/50 rounded-2xl backdrop-blur-sm">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600">99.9%</div>
+                  <div className="text-sm text-gray-600">Accuracy Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-teal-600">24hrs</div>
+                  <div className="text-sm text-gray-600">Avg Turnaround</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600">500+</div>
+                  <div className="text-sm text-gray-600">Test Types</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-6 mb-12">
+                <button className="bg-blue-600 text-white px-10 py-5 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 flex items-center justify-center text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Order Tests Now
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-6 h-6 ml-2" />
                 </button>
-                <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center justify-center">
+                <button className="border-2 border-blue-600 text-blue-600 px-10 py-5 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 flex items-center justify-center text-lg hover:shadow-lg">
                   View Test Menu
-                  <FileText className="w-5 h-5 ml-2" />
+                  <FileText className="w-6 h-6 ml-2" />
                 </button>
               </div>
-              <div className="flex items-center space-x-8">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-6 h-6 text-green-500" />
-                  <span className="text-gray-700 font-medium">
+              <div className="flex items-center space-x-8 pt-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-7 h-7 text-green-500" />
+                  <span className="text-gray-700 font-medium text-lg">
                     24hr Turnaround
                   </span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-6 h-6 text-green-500" />
-                  <span className="text-gray-700 font-medium">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-7 h-7 text-green-500" />
+                  <span className="text-gray-700 font-medium text-lg">
                     CLIA Certified
                   </span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-6 h-6 text-green-500" />
-                  <span className="text-gray-700 font-medium">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-7 h-7 text-green-500" />
+                  <span className="text-gray-700 font-medium text-lg">
                     Nationwide Service
                   </span>
                 </div>
               </div>
             </div>
-            <di className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 relative z-10">
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 relative z-10 w-full max-w-md">
                 <div className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Why Choose Us?
+                    </h3>
+                    <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto rounded-full"></div>
+                  </div>
+
+                  <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Beaker className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 text-base">
                         Advanced Testing
-                      </h3>
-                      <p className="text-gray-600">Blood, Urine & Saliva</p>
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Blood, Urine & Saliva
+                      </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
+
+                  <div className="flex items-center gap-4 p-4 bg-teal-50 rounded-xl hover:bg-teal-100 transition-colors">
+                    <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Clock className="w-6 h-6 text-teal-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 text-base">
                         Fast Results
-                      </h3>
-                      <p className="text-gray-600">Within 24 hours</p>
+                      </h4>
+                      <p className="text-gray-600 text-sm">Within 24 hours</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+
+                  <div className="flex items-center gap-4 p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Shield className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 text-base">
                         Secure & Reliable
-                      </h3>
-                      <p className="text-gray-600">HIPAA Compliant</p>
+                      </h4>
+                      <p className="text-gray-600 text-sm">HIPAA Compliant</p>
                     </div>
                   </div>
+
+                  {/* Add testimonial quote */}
                 </div>
               </div>
+
+              {/* Enhanced background decoration */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl transform rotate-3 scale-105 opacity-20"></div>
-            </di>
+              <div className="absolute top-4 right-4 w-6 h-6 bg-yellow-400 rounded-full animate-pulse opacity-60"></div>
+              <div className="absolute bottom-8 left-8 w-4 h-4 bg-pink-400 rounded-full animate-bounce opacity-50"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -620,7 +662,7 @@ const AccessMedLabHomepage = () => {
 
       {/* For Physicians Section */}
       <section id="physicians" className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-4xl font-bold text-gray-900 mb-6">
@@ -787,7 +829,7 @@ const AccessMedLabHomepage = () => {
             ))}
           </div>
         </div>
-        <div className="container lg:mt-6 mx-auto bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+        <div className=" lg:mt-6 mx-auto bg-white rounded-2xl shadow-xl p-8 lg:p-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
