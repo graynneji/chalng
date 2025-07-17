@@ -180,7 +180,7 @@ const AccessMedLabHomepage = () => {
     ];
 
     return (
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-20 bg-gray-50 px-16 mx-auto">
         <div className=" mx-auto px-4 ">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -287,7 +287,7 @@ const AccessMedLabHomepage = () => {
     ];
 
     return (
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white px-16 mx-auto">
         <div className=" mx-auto px-4 ">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -476,7 +476,7 @@ const AccessMedLabHomepage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-teal-50 relative overflow-hidden">
+      <section className="bg-gradient-to-br px-16 mx-auto from-blue-50 via-white to-teal-50 relative overflow-hidden">
         {/* Floating elements for visual interest */}
         {/* <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-30 animate-pulse"></div> */}
         {/* <div className="absolute bottom-20 right-10 w-16 h-16 bg-teal-200 rounded-full opacity-40 animate-bounce"></div> */}
@@ -661,7 +661,7 @@ const AccessMedLabHomepage = () => {
       </section>
 
       {/* For Physicians Section */}
-      <section id="physicians" className="py-20 bg-white">
+      <section id="physicians" className="py-20 bg-white px-16 mx-auto">
         <div className=" mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -829,7 +829,7 @@ const AccessMedLabHomepage = () => {
             ))}
           </div>
         </div>
-        <div className=" lg:mt-6 mx-auto bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+        <div className="container lg:mt-6 mx-auto bg-white rounded-2xl shadow-xl p-8 lg:p-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
