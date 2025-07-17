@@ -476,7 +476,7 @@ const AccessMedLabHomepage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-8 pb-8 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-teal-50 relative overflow-hidden">
         {/* Floating elements for visual interest */}
         {/* <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-30 animate-pulse"></div> */}
         {/* <div className="absolute bottom-20 right-10 w-16 h-16 bg-teal-200 rounded-full opacity-40 animate-bounce"></div> */}
